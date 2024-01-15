@@ -4,18 +4,24 @@
 int main() {
     PriorityQueue<int> myPriorityQueue;
 
-    myPriorityQueue.InsertWithPriority(3, 1);
-    myPriorityQueue.InsertWithPriority(5, 2);
-    myPriorityQueue.InsertWithPriority(1, 3);
+    std::cout << "Is Priority Queue Empty? " << (myPriorityQueue.IsEmpty() ? "Yes" : "No") << "\n";
 
-    std::cout << "Peek: " << myPriorityQueue.Peek() << std::endl;
+    myPriorityQueue.InsertWithPriority(10, 2);
+    myPriorityQueue.InsertWithPriority(20, 1);
+    myPriorityQueue.InsertWithPriority(30, 3);
 
-    myPriorityQueue.PullHighestPriorityElement();
+    std::cout << "Priority Queue elements:\n";
+    myPriorityQueue.Show();
 
-    std::cout << "Peek after pulling highest priority element: " << myPriorityQueue.Peek() << std::endl;
+    std::cout << "Is Priority Queue Full? " << (myPriorityQueue.IsFull() ? "Yes" : "No") << "\n";
 
-    std::cout << "Is PriorityQueue empty? " << (myPriorityQueue.IsEmpty() ? "Yes" : "No") << std::endl;
-    std::cout << "Is PriorityQueue full? " << (myPriorityQueue.IsFull() ? "Yes" : "No") << std::endl;
+    int pulledElement = myPriorityQueue.PullHighestPriorityElement();
+    std::cout << "Pulled element with highest priority: " << pulledElement << "\n";
+
+    std::cout << "Peeked element with highest priority: " << myPriorityQueue.Peek() << "\n";
+
+    std::cout << "Priority Queue elements after pulling:\n";
+    myPriorityQueue.Show();
 
     return 0;
 }
