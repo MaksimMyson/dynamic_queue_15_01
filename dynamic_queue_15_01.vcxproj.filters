@@ -9,5 +9,11 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="Bus.cpp" />
+    <ClCompile Include="Stop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bus.h" />
+    <ClInclude Include="Stop.h" />
   </ItemGroup>
 </Project>
